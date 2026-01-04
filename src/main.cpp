@@ -1,7 +1,7 @@
 #include <Arduino.h>
 
 // put function declarations here:
-int myFunction(int, int);
+// int myFunction(int, int);
 
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
@@ -17,6 +17,6 @@ void loop() {
 }
 
 // put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
+//int myFunction(int x, int y) {
+  //return x + y;
+//}
