@@ -79,6 +79,6 @@ void loop() {
   Serial.print(",");
   Serial.println(temp_c, 2);
 
-  // 100Hz sampling rate = 10ms delay
-  delay(10);
+  // 200Hz sampling rate = 5ms delay (better for fast gestures)
+  delay(5);
 }

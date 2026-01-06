@@ -15,7 +15,7 @@ import sys
 SERIAL_PORT = '/dev/cu.usbmodem1201'  # Update this to match your Arduino port
 BAUD_RATE = 115200
 SAMPLE_DURATION = 2.0  # seconds
-SAMPLE_RATE = 100  # Hz (matches Arduino)
+SAMPLE_RATE = 200  # Hz (matches Arduino - better for fast gestures)
 EXPECTED_SAMPLES = int(SAMPLE_DURATION * SAMPLE_RATE)
 
 # Gesture labels with descriptions
