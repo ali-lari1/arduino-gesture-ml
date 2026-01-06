@@ -67,42 +67,44 @@ void loop() {
 
   float temp_c = temperature / 340.00 + 36.53;
 
-  // Human-readable output
-  Serial.println("==================== Reading ====================");
+  // Human-readable output - compact format
+  Serial.println("================================================");
+
   Serial.print("Time: ");
-  Serial.print(millis());
-  Serial.println(" ms");
-  Serial.println();
+  Serial.print(millis() / 1000.0, 2);
+  Serial.println(" s");
 
-  Serial.println("Accelerometer (g-force):");
-  Serial.print("  X-axis: ");
-  Serial.print(accel_x_g, 3);
-  Serial.println(" g");
-  Serial.print("  Y-axis: ");
-  Serial.print(accel_y_g, 3);
-  Serial.println(" g");
-  Serial.print("  Z-axis: ");
-  Serial.print(accel_z_g, 3);
-  Serial.println(" g");
   Serial.println();
+  Serial.println("Accel (g)   |  Gyro (deg/s)  | Temp");
+  Serial.println("------------|----------------|--------");
 
-  Serial.println("Gyroscope (rotation rate):");
-  Serial.print("  X-axis: ");
-  Serial.print(gyro_x_dps, 3);
-  Serial.println(" °/s");
-  Serial.print("  Y-axis: ");
-  Serial.print(gyro_y_dps, 3);
-  Serial.println(" °/s");
-  Serial.print("  Z-axis: ");
-  Serial.print(gyro_z_dps, 3);
-  Serial.println(" °/s");
-  Serial.println();
+  // X values
+  Serial.print("X: ");
+  if (accel_x_g >= 0) Serial.print(" ");
+  Serial.print(accel_x_g, 2);
+  Serial.print("  | ");
+  if (gyro_x_dps >= 0) Serial.print(" ");
+  Serial.print(gyro_x_dps, 1);
+  Serial.print("    | ");
+  Serial.print(temp_c, 1);
+  Serial.println(" C");
 
-  Serial.print("Temperature: ");
-  Serial.print(temp_c, 2);
-  Serial.println(" °C");
-  Serial.println();
+  // Y values
+  Serial.print("Y: ");
+  if (accel_y_g >= 0) Serial.print(" ");
+  Serial.print(accel_y_g, 2);
+  Serial.print("  | ");
+  if (gyro_y_dps >= 0) Serial.print(" ");
+  Serial.println(gyro_y_dps, 1);
 
-  // Slower refresh for readability (500ms = 2Hz)
-  delay(500);
+  // Z values
+  Serial.print("Z: ");
+  if (accel_z_g >= 0) Serial.print(" ");
+  Serial.print(accel_z_g, 2);
+  Serial.print("  | ");
+  if (gyro_z_dps >= 0) Serial.print(" ");
+  Serial.println(gyro_z_dps, 1);
+
+  // Slower refresh for readability (1000ms = 1Hz)
+  delay(1000);
 }
