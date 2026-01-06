@@ -2,9 +2,30 @@
 
 This guide explains how to perform each gesture for data collection. Hold the Arduino/MPU-6050 in your hand comfortably, with the sensor secure but not too tight.
 
+## Sensor Orientation - IMPORTANT!
+
+For consistent gesture recognition, always hold the sensor the same way:
+
+**Standard Orientation:**
+- Look at the MPU-6050 chip - it has **X** and **Y** arrows marked on it
+- Orient the sensor so:
+  - **aX arrow points LEFT-RIGHT** (horizontal across your body)
+  - **aY arrow points UP-DOWN** (vertical / toward ground)
+  - **aZ points FORWARD** (out from the flat surface, toward you)
+
+**Quick reference:**
+- **aX** = Left/Right movement (horizontal)
+- **aY** = Up/Down movement (vertical)
+- **aZ** = Forward/Backward (perpendicular to the board)
+
+**Consistency tip:** Always hold the sensor the same way for all gestures. Mark your preferred orientation with tape if needed!
+
+---
+
 ## General Tips
 
 - **Consistency is key**: Perform each gesture the same way every time
+- **Hold the same way**: Always use the standard orientation above
 - **Natural movements**: Don't be too robotic, but stay consistent
 - **Full motion**: Complete the entire gesture within the 2-second window
 - **Return to neutral**: End in a resting position
@@ -31,11 +52,10 @@ This guide explains how to perform each gesture for data collection. Hold the Ar
 **Description**: Quick horizontal swipe to the left
 
 **How to perform**:
-1. Hold sensor in your hand, arm relaxed
-2. When countdown says "GO!", quickly swipe your hand to the left
-3. Move about 30-40cm (1-1.5 feet) horizontally
-4. Keep the motion sharp and decisive
-5. Return to resting position
+- Hold sensor in your hand, arm relaxed
+- When countdown says "GO!", quickly swipe your hand to the left
+- Keep the motion sharp and decisive
+- Return to resting position
 
 **What the sensor sees**:
 - **aX** spikes negative during the swipe
@@ -49,11 +69,9 @@ This guide explains how to perform each gesture for data collection. Hold the Ar
 **Description**: Quick horizontal swipe to the right
 
 **How to perform**:
-1. Hold sensor in your hand, arm relaxed
-2. When countdown says "GO!", quickly swipe your hand to the right
-3. Move about 30-40cm horizontally
-4. Keep the motion sharp and decisive
-5. Return to resting position
+- Hold sensor in your hand, arm relaxed
+- When countdown says "GO!", quickly swipe your hand to the right
+- Keep the motion sharp and decisive
 
 **What the sensor sees**:
 - **aX** spikes positive during the swipe

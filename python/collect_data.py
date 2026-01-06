@@ -12,7 +12,7 @@ import os
 import sys
 
 # Configuration
-SERIAL_PORT = '/dev/cu.usbmodem11301'  # Update this to match your Arduino port
+SERIAL_PORT = '/dev/cu.usbmodem1201'  # Update this to match your Arduino port
 BAUD_RATE = 115200
 SAMPLE_DURATION = 2.0  # seconds
 SAMPLE_RATE = 100  # Hz (matches Arduino)
