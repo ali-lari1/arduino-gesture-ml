@@ -169,28 +169,6 @@ For consistent gesture recognition, always hold the sensor the same way:
 
 ---
 
-## 10. Tap
-**Description**: Single quick tap/flick motion
-
-**How to perform**:
-1. Hold sensor in your hand
-2. When countdown says "GO!", make a quick sharp flick/tap motion
-3. Like flicking water off your fingers
-4. Very brief, sudden motion
-5. Can be in any direction - just make it sharp and quick
-
-**What the sensor sees**:
-- Very brief spike in one or more acceleration axes
-- Short duration (under 0.5 seconds)
-- Distinct from longer gestures
-
-**Tips**:
-- Think "snap" motion
-- Quick wrist flick
-- The sharper the better for distinguishing from other gestures
-
----
-
 ## Data Collection Strategy
 
 For best ML model performance:
