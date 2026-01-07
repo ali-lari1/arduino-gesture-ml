@@ -9,9 +9,9 @@ For consistent gesture recognition, always hold the sensor the same way:
 **Standard Orientation:**
 - Look at the MPU-6050 chip - it has **X** and **Y** arrows marked on it
 - Orient the sensor so:
-  - **aX arrow points LEFT-RIGHT** (horizontal across your body)
-  - **aY arrow points UP-DOWN** (vertical / toward ground)
-  - **aZ points FORWARD** (out from the flat surface, toward you)
+  - **aX arrow points LEFT-RIGHT** (horizontal on flat surface)
+  - **aY arrow points UP-DOWN** (vertical on flat surface)
+  - **aZ points FORWARD** (out from the flat surface)
 
 **Quick reference:**
 - **aX** = Left/Right movement (horizontal)
@@ -54,14 +54,12 @@ For consistent gesture recognition, always hold the sensor the same way:
 **How to perform**:
 - Hold sensor in your hand, arm relaxed
 - When countdown says "GO!", quickly swipe your hand to the left
-- Keep the motion sharp and decisive
+- Keep the movement sharp 
 - Return to resting position
 
 **What the sensor sees**:
-- **aX** spikes negative during the swipe
+- **aX** spikes negative, then positive, then negative again during the swipe
 - Brief gyroscope activity
-
-**Tips**: Like swiping a phone screen, but bigger and in the air
 
 ---
 
@@ -70,14 +68,13 @@ For consistent gesture recognition, always hold the sensor the same way:
 
 **How to perform**:
 - Hold sensor in your hand, arm relaxed
-- When countdown says "GO!", quickly swipe your hand to the right
-- Keep the motion sharp and decisive
+- When countdown says "GO!", quickly swipe your hand to the left
+- Keep the movement sharp
+- Return to resting position
 
 **What the sensor sees**:
-- **aX** spikes positive during the swipe
+- **aX** spikes positive, then negative, then positive again during the swipe
 - Brief gyroscope activity
-
-**Tips**: Mirror image of swipe left
 
 ---
 
@@ -85,17 +82,13 @@ For consistent gesture recognition, always hold the sensor the same way:
 **Description**: Quick upward motion
 
 **How to perform**:
-1. Start with hand at waist level
-2. When countdown says "GO!", quickly move hand upward
-3. Move about 30-40cm vertically
-4. Like raising your hand to answer a question
-5. Return to resting position
+- Start with hand at waist level
+- When countdown says "GO!", quickly move hand upward
+- Return to resting position
 
 **What the sensor sees**:
-- **aZ** increases significantly during upward acceleration
-- Then decreases as you decelerate
-
-**Tips**: Sharp upward motion, not slow lifting
+- **aZ** decreases significantly during the upward move
+- Then increases back to ~1g as you return to the original position
 
 ---
 
@@ -103,17 +96,13 @@ For consistent gesture recognition, always hold the sensor the same way:
 **Description**: Quick downward motion
 
 **How to perform**:
-1. Start with hand at chest/shoulder level
-2. When countdown says "GO!", quickly move hand downward
-3. Move about 30-40cm vertically
-4. Like chopping motion or swatting downward
-5. Return to resting position
+- Start with hand at waist level
+- When countdown says "GO!", quickly move hand downward
+- Return to resting position
 
 **What the sensor sees**:
-- **aZ** decreases (can briefly go negative)
+- **aZ** increases 
 - Opposite pattern of swipe up
-
-**Tips**: Controlled but quick downward motion
 
 ---
 

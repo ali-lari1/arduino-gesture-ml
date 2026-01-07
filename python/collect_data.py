@@ -12,7 +12,7 @@ import os
 import sys
 
 # Configuration
-SERIAL_PORT = '/dev/cu.usbmodem1201'  # Update this to match your Arduino port
+SERIAL_PORT = '/dev/cu.usbmodem11301'  # Update this to match your Arduino port
 BAUD_RATE = 115200
 SAMPLE_DURATION = 2.0  # seconds
 SAMPLE_RATE = 200  # Hz (matches Arduino - better for fast gestures)
@@ -65,6 +65,11 @@ def connect_arduino(port, baud_rate, timeout=2):
 def record_gesture(ser, duration):
     """Record sensor data for specified duration"""
     readings = []
+
+    # Clear any accumulated data in the serial buffer
+    ser.reset_input_buffer()
+    time.sleep(0.1)  # Brief pause to let buffer clear
+
     start_time = time.time()
 
     print(f"Recording for {duration} seconds...")
