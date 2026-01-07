@@ -110,21 +110,15 @@ For consistent gesture recognition, always hold the sensor the same way:
 **Description**: Forward punching motion
 
 **How to perform**:
-1. Hold sensor in your fist
-2. Start with arm bent, hand near your shoulder
-3. When countdown says "GO!", quickly extend arm forward in a punching motion
-4. Extend about 30-40cm forward
-5. Pull back to starting position
+- Start with arm bent, hand near your shoulder
+- When countdown says "GO!", quickly extend arm forward in a punching motion
+- Extend forward
+- Pull back to starting position
 
 **What the sensor sees**:
 - **aY** spikes positive (forward acceleration)
 - Brief spike in opposite direction when stopping
 - Possible rotation from wrist twist
-
-**Tips**:
-- Like a boxing jab - quick extension and retraction
-- Keep wrist relatively stable
-- Don't hyperextend your elbow
 
 ---
 
@@ -132,18 +126,16 @@ For consistent gesture recognition, always hold the sensor the same way:
 **Description**: Rapid side-to-side shaking
 
 **How to perform**:
-1. Hold sensor in your hand
-2. When countdown says "GO!", rapidly shake hand left-right
-3. Small quick movements (about 10-15cm side to side)
-4. Do 4-6 shakes within the 2 seconds
-5. Fast oscillating motion
+- Hold sensor in your hand
+- When countdown says "GO!", rapidly shake hand left-right
+- Small quick side-to-side movements
+- Do 4-6 shakes within the 2 seconds
+- Fast oscillating motion
 
 **What the sensor sees**:
 - **aX** oscillates rapidly positive and negative
 - High frequency changes in acceleration
 - **gY** or **gZ** shows rotation if you rotate while shaking
-
-**Tips**: Like shaking a spray paint can or dice
 
 ---
 
@@ -151,21 +143,14 @@ For consistent gesture recognition, always hold the sensor the same way:
 **Description**: Rotate sensor clockwise in a circle
 
 **How to perform**:
-1. Hold sensor flat (like holding a phone screen-up)
-2. When countdown says "GO!", rotate your hand clockwise
-3. Make 1-2 complete circles within 2 seconds
-4. Keep the rotation smooth and continuous
-5. Imagine stirring a pot
+- Starting from the flat position (idle), carry up the sensor
+- When countdown says "GO!", rotate your hand clockwise
+- Make 1-2 complete quarter turns within 2 seconds
+- Keep the rotation smooth and continuous
+- Imagine stirring a pot
 
 **What the sensor sees**:
-- **gZ** shows positive rotation (clockwise)
-- Accelerometer shows circular pattern as orientation changes
-- Gravity vector rotates through different axes
-
-**Tips**:
-- Keep sensor relatively flat
-- Smooth circular motion
-- Looking down at the sensor, rotate it like a clock hand
+- **gZ** shows oscillation
 
 ---
 
@@ -173,17 +158,14 @@ For consistent gesture recognition, always hold the sensor the same way:
 **Description**: Rotate sensor counter-clockwise
 
 **How to perform**:
-1. Hold sensor flat (like holding a phone screen-up)
-2. When countdown says "GO!", rotate your hand counter-clockwise
-3. Make 1-2 complete circles within 2 seconds
-4. Keep the rotation smooth and continuous
-5. Opposite direction from clockwise
+- Starting from the flat position (idle), carry up the sensor
+- When countdown says "GO!", rotate your counter-clockwise
+- Make 1-2 complete quarter turns within 2 seconds
+- Keep the rotation smooth and continuous
+- Imagine stirring a pot
 
 **What the sensor sees**:
-- **gZ** shows negative rotation (counter-clockwise)
-- Accelerometer shows circular pattern (opposite direction from CW)
-
-**Tips**: Mirror image of clockwise rotation
+- **gZ** shows oscillation that is the mirro of the CW gesture
 
 ---
 

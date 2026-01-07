@@ -28,8 +28,7 @@ GESTURES = [
     ("punch", "Forward punching motion"),
     ("shake", "Rapid side-to-side shaking"),
     ("rotate_cw", "Rotate sensor clockwise in a circle"),
-    ("rotate_ccw", "Rotate sensor counter-clockwise"),
-    ("tap", "Single quick tap/flick motion")
+    ("rotate_ccw", "Rotate sensor counter-clockwise")
 ]
 
 
@@ -66,9 +65,20 @@ def record_gesture(ser, duration):
     """Record sensor data for specified duration"""
     readings = []
 
-    # Clear any accumulated data in the serial buffer
+    # Clear buffer aggressively and wait for fresh data stream
     ser.reset_input_buffer()
-    time.sleep(0.1)  # Brief pause to let buffer clear
+    time.sleep(0.5)  # Wait half second for buffer to fully clear
+
+    # Discard initial readings to sync with fresh stream
+    for _ in range(10):
+        try:
+            ser.readline()
+        except:
+            pass
+
+    # Final buffer clear right before recording
+    ser.reset_input_buffer()
+    time.sleep(0.1)
 
     start_time = time.time()
 
